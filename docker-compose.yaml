@@ -1,3 +1,4 @@
+# Your Solution
 version: '3'
 services:
 
@@ -8,9 +9,9 @@ services:
       dockerfile: Dockerfile
     container_name: book_catalog
     ports:
-     - "4001:80"
+     - "8087:8087"
     environment:
-      - PORT=80
+      - PORT=8087
       - DATABASE_URL=postgresql://sit722_kushani_part3_user:E0oUabnec3IjAamuHg5NaRCV1BvHupyw@dpg-crci542j1k6c73cmjlj0-a.oregon-postgres.render.com/sit722_kushani_part3
     restart: "no"
 
@@ -21,8 +22,8 @@ services:
       dockerfile: Dockerfile
     container_name: inventory_management
     ports:
-     - "4002:80"
+     - "8088:8088"
     environment:
-      - PORT=80
+      - PORT=8088
       - DATABASE_URL=postgresql://sit722_kushani_part3_user:E0oUabnec3IjAamuHg5NaRCV1BvHupyw@dpg-crci542j1k6c73cmjlj0-a.oregon-postgres.render.com/sit722_kushani_part3
     restart: "no"
